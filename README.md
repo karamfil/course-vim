@@ -58,4 +58,8 @@ By default, the sections and pages will follow the folder structure within `/doc
 -   [mathieudutour/gatsby-digital-garden: digital garden with Gatsby](https://github.com/mathieudutour/gatsby-digital-garden)
 -   [TuanManhCao/digital-garden: Free Obisidian Publish alternative](https://github.com/TuanManhCao/digital-garden)
 
+```
 cp -a "/Users/karamfil/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/Vim/." ./docs
+```
+
+https://karamfil.github.io/course-vim
