@@ -8,9 +8,15 @@ tags:
 ## Why creating this?
 Having used Vim-like keybindings for years in tools like Sublime Text and VSCode, I keep falling in love with its power. I’ve created this course to expand, strengthen and deepen my own understanding of Vim. At some point I decided to share this course and designed it to refine those skills and help you on the same journey.
 
+I like vscode it is great and powerful IDE and for now want to stay in, and use the best of both worlds.
+
 Another reason is, I was not able to find a good tutorial, course or book that covers it for people who do not have the time to directly jump and engulf them fully in vim shroud dropping the productivity tenfold. So I want this to be a slow, smooth and steady transition keeping you on the edge of the comfort zone.
 
 This will make your transition to terminal vim easier should you choose to take this path later.
+
+## Program
+We will start with some of the basics to get a good foundation, then move on the some of the things i found most useful to everyday work, some plugins to greatly improve the usability and then we will proceed more advanced, less used or obscure topics.
+
 ## Requirements
 This course assumes you already know and use VSCode. We’ll leverage its Neovim integration initially to transition seamlessly into a more Vim-centric workflow.
 
