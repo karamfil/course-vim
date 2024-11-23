@@ -12,7 +12,7 @@ tags:
 - `u`: undo
 - `C-r`: redo
 
-### Insert Mode:
+## Insert Mode:
 
 - `i`, `I`: insert
 - `a`, `A`: append
@@ -26,12 +26,35 @@ tags:
 - `ge`, `gE`: end of previous word (with/without punctuation).
 
 ## Operators:
+
 - `c`: change
 - `C`: Change to end of line
 - `cc`: change line
 - `d`: delete
 - `D`: Delete to end of line
 - `dd`: delete line
+
+## Text Objects
+
+**General Syntax**: `[operator][a/i][text object]`
+- `a` : a/around
+- `i` : inner/inside.
+
+Text Objects:
+- `p`, `w`, `s` : paragraph, word, sentence.
+- `[`, `(`, `{`, `<` : Blocks.
+- `'`, `"`, `` ` `` : Quoted strings.
+- `b`, `B` : Blocks by type.
+- `t` : <tag\> blocks.
+
+## Find and Till/To Commands:
+    
+- `f<char>`: Find next `<char>`.
+- `F<char>`: Find previous `<char>`.
+- `t<char>`: To/Till next `<char>`.
+- `T<char>`: To/Till previous `<char>`.
+- `;`: Repeat the last `f`, `F`, `t`, or `T` motion in the same direction.
+- `,`: Repeat the last `f`, `F`, `t`, or `T` motion in the opposite direction.
 
 ## Repeats:
 - `.`: Repeat the last change command

@@ -42,18 +42,7 @@ The `.` command repeats the last change command, and it works seamlessly with re
 
 ## Practice
 
-**Basic Motion Keys**:
-    
-- Move down 10 lines using `10j`.
-- Jump forward 5 words with `5w`.
-- Move backward 8 words with `8b`.
-
-**Operators with Repeat Counts**:
-    
-- Delete 4 words in the sentence: `The quick brown fox jumps over the lazy dog.` using `4dw`.
-    
-**Combining with the `.` Command**:
-    
-- Use `3cw` to change 3 words in the sentence: `The quick brown fox jumps over the lazy dog.` to "fast" then use `.` to repeat the same change on the next group of words.
-- Move to the beginning with `b`, Change 5 words using `.` 
-
+- **Using Repeats/Counts with Motions**: Focus on combining repeat counts with motions like `j`, `w`, and `e`. Practice navigating efficiently by using counts instead of repeating motions multiple times.
+- **Repeat Counts with Operators**: Work on combining repeat counts with operators like `d`, `c`, and `y`. Focus on editing multiple words or lines in a single command to streamline your workflow.
+- **Integrating the `.` Command**: Pay attention to how repeat counts can enhance the effectiveness of the `.` command. Practice planning edits so you can repeat them logically and efficiently with `.`.
+- **Efficiency Evaluation**: As you use repeat counts, evaluate if the number you chose is optimal for the task or if a different motion/operator combination would be more efficient.

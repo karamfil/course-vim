@@ -59,7 +59,7 @@ By default, the sections and pages will follow the folder structure within `/doc
 -   [TuanManhCao/digital-garden: Free Obisidian Publish alternative](https://github.com/TuanManhCao/digital-garden)
 
 ```
-rsync -a "/Users/karamfil/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/Vim/" ./docs
+rsync -avh --delete "/Users/karamfil/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/Vim/" ./docs/
 ```
 
 https://karamfil.github.io/course-vim

@@ -14,9 +14,11 @@ A **text object** is a powerful Vim concept that allows you to operate on a logi
 Text objects are typically used with two components:
 
 A command (e.g., `d` for delete, `c` for change) and the text object (e.g., `iw` for "inner word" or `ap` for "a/around paragraph").
+
+One advantage over the word motions is that you don need to be at the start or beginning of a word to change it, with text object you can be in an arbitrary character of the word.
 #### Note
 
-Text objects can be extended with plugins to add more functionality. We will cover plugins for text objects in future weeks.
+Text objects can be extended with plugins to add more functionality. We will cover such plugins in future weeks.
 
 ### Default Text Objects
 
@@ -114,24 +116,19 @@ Text Objects:
 - `[`, `(`, `{`, `<` : Blocks.
 - `'`, `"`, `` ` `` : Quoted strings.
 - `b`, `B` : Blocks by type.
-- `t` : \<tag\> blocks.
+- `t` : <tag\> blocks.
 
 ---
 
 ## Practice
 
-**Basic Selection**:
+- Text objects are really efficient, focus on figuring out all the places you can utilize them
+- Whenever you use a motion think if this motion is efficient enough or can you use a text object to do your change with less effort
 
-- Use `daw` to delete the current word, including trailing whitespace.
-- Use `c2aw` to change the current word, including trailing whitespace.
-- Use `ci"` to replace the content inside quotes in `"quick brown fox"`.
-- Use `dap` to delete the entire paragraph.
-
-**Advanced Manipulation**:
-
-- Delete the inner content of parentheses using `di(`.
-- Change everything inside a curly brace block with `ci{`.
-- Change the content of an XML tag using `cit` in `<tag>content</tag>`.
+- **Using Text Objects**: Focus on identifying scenarios where text objects make your edits faster and more precise. Practice  editing logical chunks of text like paragraphs, sentences, or blocks instead of relying on manual navigation.
+- **Inner vs. Around**: Pay close attention to the difference between `i` (inner) and `a` (around). Experiment with when to include or exclude surrounding delimiters for efficient edits.
+- **Combining with Operators**: Practice combining text objects with operators like `d`, `c`, and `y`. Aim to minimize the steps needed to perform edits on structured text.
+- **Efficiency**: As you use text objects, evaluate whether the motion or text object you chose was the most efficient for the task. Explore alternative text objects when applicable.
 
 ---
 

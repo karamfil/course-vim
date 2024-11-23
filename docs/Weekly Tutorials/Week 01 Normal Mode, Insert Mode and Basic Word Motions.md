@@ -362,18 +362,10 @@ When you are back in normal mode you can press `u` to undo a change.
 
 ## **Practice**
 
-**Switching Modes**:
-
-- Use Insert commands to enter text at different positions.
-- After each insert press escape to go back to normal mode and navigate there
-
-**Using Word Motions**:
-
-- Focus on navigating horizontally with using all word motions.
-
-**Undo/Redo**
-
-- Use vim undo and redo instead of built in vscode undo/redo
+- **Switching Modes**: Practice using Insert Mode commands (`i`, `I`, `a`, `A`, `o`, `O`) to enter text at different positions. After completing each insertion, press `Esc` to return to Normal Mode and use motions to navigate. Focus hard on building the habit of returning to Normal Mode for movement and commands as this would be a big efficiency boost
+- **Using Word Motions**: Pay attention to navigating horizontally using all word motions (`w`, `W`, `e`, `E`, `b`, `B`, `ge`, `gE`).
+- **Undo/Redo**: Instead of relying on VSCode’s undo/redo, practice using Vim's `u` to undo changes and `Ctrl-r` to redo them. Observe how changes in Insert Mode are grouped into undo blocks and use this to your advantage when correcting mistakes.
+- **Efficient Workflow**: As you practice, evaluate whether your mode switches and motions are efficient. Are you navigating effectively with word motions? Are you returning to Normal Mode consistently after edits? Reflect and adjust as needed to improve your flow.
 
 ---
 ## **Further Reading**

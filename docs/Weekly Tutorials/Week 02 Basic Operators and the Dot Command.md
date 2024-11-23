@@ -27,11 +27,11 @@ Note: in vscode this is usually where you `-- INSERT --`, but it quickly disappe
 
 ### Operators
 - `c` ==change== : Deletes the specified text and enters Insert Mode. By default deleted text is also copied into the clipboard (for vim this is a special register - we will cover this later).
-	Example: `ce` changes till the end of the word under the cursor.
+	`ce` changes till the end of the word under the cursor.
 	TODO Gif example
 	
 - `d` ==delete== : Deletes the specified text. By default deleted text is also copied.
-	Example: `db` deletes back to the beginning of the current word.
+	`db` deletes back to the beginning of the current word.
 	TODO Gif example
 
 Note: hjkl and arrow keys are also navigation commands so you can combine them with the operators.
@@ -102,32 +102,32 @@ When doing the exercises to better understand how the operators work try to focu
 ### Operators
 
 #### Exercise: `c`:
-    - Use `ce` to replace "quick" with "speedy" in the sentence: `The quick brown fox`.
-    - Try `cc` to replace "Lorem ipsum..." line with "Something el–se".
-    - Use `C` to replace everything after "fox" in: `The quick brown fox`.
+
+- Use `ce` to replace "quick" with "speedy" in the sentence: `The quick brown fox`.
+- Try `cc` to replace "Lorem ipsum..." line with "Something el–se".
+- Use `C` to replace everything after "fox" in: `The quick brown fox`.
 
 #### Exercise: `d`:
-    - Use `de` to delete "quick" in the sentence: "The quick brown fox".
-    - Use `dd` to delete the entire second line.
-    - Try `D` to delete the content after "brown".
+
+- Use `de` to delete "quick" in the sentence: "The quick brown fox".
+- Use `dd` to delete the entire second line.
+- Try `D` to delete the content after "brown".
 
 ### Repeat
 #### Exercise: `.`**:
-    - After using `dw`, `db`, `de` or something else, press `.` to delete delete another.
-    - navigate to the beginning a of a word change using the `c` operator and motion like `e`, write something, go back to normal mode, then navigate to another word and press `.`, it will repeat the change and 
+
+- After using `dw`, `db`, `de` or something else, press `.` to delete delete another.
+- navigate to the beginning a of a word change using the `c` operator and motion like `e`, write something, go back to normal mode, then navigate to another word and press `.`, it will repeat the change and 
 
 ---
 
 ## Practice
 
-**Operators**
-- Instead of going straight to insert mode, focus on changing words combining the operators with word motions
-
-**Switching Modes**:
-- Don't forget to keep going back to normal mode for navigation after each insert
-
-**Using Word Motions**:
-- Keep your focus on navigating horizontally using all word motions.
+- **Using Operators with Word Motions**: Focus on combining `c` and`d`with word motions like `w`, `e`, and `b`. Instead of jumping into Insert Mode right away, think about the text you want to modify and use motions to define the scope of your operation.
+- **Switching Modes**: After making a change with `c` or deleting text with `d`, remember to return to Normal Mode for navigation. ⚠️ Avoid staying in Insert Mode longer than necessary.
+- **Navigating with Word Motions**: While practicing operators, keep your focus on navigating efficiently using word motions (`w`, `e`, `b`). Use them to position the cursor precisely before applying an operator.
+- **Repetition with the Dot Command**: Train yourself to repeat actions with the `.` command. Plan your edits so you can make one precise operation and then repeat it as needed. For example, delete multiple words or change several similar patterns using `.`.
+- **Evaluate Your Workflow and Efficiency**: Are you efficiently combining operators with motions? Are you using the `.` command to avoid repeating the same sequence of commands manually? Try different approaches to improve.
 
 ---
 
