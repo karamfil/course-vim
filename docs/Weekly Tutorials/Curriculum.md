@@ -18,6 +18,7 @@ https://www.linuxfoundation.org/blog/blog/classic-sysadmin-vim-101-a-beginners-g
 - [ ] Come up with mnemonics for everything 
 - [ ] Come up with practical examples 
 - [ ] Come up with exercises after each week
+- [ ] Make sure exercises are styled the same way
 - [ ] ?? Add prev and next links on top and bottom ??
 
 
@@ -27,17 +28,17 @@ https://www.linuxfoundation.org/blog/blog/classic-sysadmin-vim-101-a-beginners-g
 - [Week 01 Normal Mode, Insert Mode and Basic Word Motions](Vim/Weekly%20Tutorials/Week%2001%20Normal%20Mode,%20Insert%20Mode%20and%20Basic%20Word%20Motions.md)
 - [Week 02 Basic Operators and the Dot Command](Vim/Weekly%20Tutorials/Week%2002%20Basic%20Operators%20and%20the%20Dot%20Command.md)
 - [[Week 03 Repeat Count]]
+- [[Week 04 Text Object]]
+- [[Week 05 Find and Till]]
+- [[Week 06 Basic Clipboard]]
+- [[Week 07 Quick Find]]
+- [[Week 08 Navigation Line]]
 
-- [[Week 04 Text Object]]: a i, w s p b B t, \[ ( { < " ' \`
-- [[Week 05 Find and Till]]: f t; `;` `,`
-- [[Week 06 Basic Clipboard]]: c d x y p
+- [[Week 09 Navigation FIle]]: gg G, :N 10G
+- [[Week 10 Visual and Selection Modes]]
+- [[Week 11 Navigation Screen]]: H M L, zz, zt, zb
 
 ### Future
-- Week 00 - Navigation Line: 0 ^ $ g_ + - 
-- Week 00 - Basic Navigation FIle: gg G, :N 10G
-- Week 00 - Visual and Selection Modes
-- Week 00 - Navigation Screen: H M L, zz, zt, zb
-- Week 00 - Quick Find: \* n # N
 - Week 00 - Jumps and Changes: C-o C-i
 - Week 00 - Basic Navigation Code: % {}
 - Week 00 - Navigation ]m})>
