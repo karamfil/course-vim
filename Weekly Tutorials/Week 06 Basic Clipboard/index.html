@@ -1,0 +1,1505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Week%2005%20Find%20and%20Till/">
+      
+      
+        <link rel="next" href="../Week%2007%20Quick%20Find/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>Week 06 Basic Clipboard - Neovim Course - Weekly</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#goals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Neovim Course - Weekly" class="md-header__button md-logo" aria-label="Neovim Course - Weekly" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Neovim Course - Weekly
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Week 06 Basic Clipboard
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Neovim Course - Weekly" class="md-nav__button md-logo" aria-label="Neovim Course - Weekly" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Neovim Course - Weekly
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CheatSheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Weekly Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Weekly Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Curriculum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curriculum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2000%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 00 Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2001%20Normal%20Mode%2C%20Insert%20Mode%20and%20Basic%20Word%20Motions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 01 Normal Mode, Insert Mode and Basic Word Motions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2002%20Basic%20Operators%20and%20the%20Dot%20Command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 02 Basic Operators and the Dot Command
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2003%20Repeat%20Count/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 03 Repeat Count
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2004%20Text%20Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 04 Text Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2005%20Find%20and%20Till/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 05 Find and Till
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Week 06 Basic Clipboard
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Week 06 Basic Clipboard
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuttingcopying-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cutting/Copying Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasting-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasting Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registers-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registers Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registers Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheatSheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2007%20Quick%20Find/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 07 Quick Find
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2008%20Navigation%20Line/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 08 Navigation Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2009%20Navigation%20FIle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 09 Navigation FIle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2010%20Visual%20and%20Selection%20Modes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 10 Visual and Selection Modes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2011%20Navigation%20Screen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 11 Navigation Screen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2012%20Navigation%20Code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 12 Navigation Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2013%20Text%20Object%20Motions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 13 Text Object Motions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2014%20Neovim%20Config%20and%20Lazy%20Plugin%20Manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 14 Neovim Config and Lazy Plugin Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%2014.1%20Plugin%20Mini%20Surround/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 14.1 Plugin Mini Surround
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_18" id="__nav_2_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vhs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_18">
+            <span class="md-nav__icon md-icon"></span>
+            Vhs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_18_1" id="__nav_2_18_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tapes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_18_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_18_1">
+            <span class="md-nav__icon md-icon"></span>
+            Tapes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_18_1_1" id="__nav_2_18_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_18_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_18_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            01
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/001-insert-a-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    001 insert a capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/001-insert-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    001 insert a
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/001-insert-i-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    001 insert i capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/001-insert-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    001 insert i
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/001-insert-o-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    001 insert o capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/001-insert-o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    001 insert o
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/002-word-b-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    002 word b capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/002-word-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    002 word b
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/002-word-e-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    002 word e capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/002-word-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    002 word e
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/002-word-ge-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    002 word ge capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/002-word-ge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    002 word ge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/002-word-w-capital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    002 word w capital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vhs/tapes/01/002-word-w/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    002 word w
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuttingcopying-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cutting/Copying Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasting-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasting Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registers-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registers Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registers Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheatSheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Week 06 Basic Clipboard</h1>
+
+<h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
+<p>By the end of this week, you should:</p>
+<ul>
+<li>Know how to use clipboard-related commands in Vim, such as <code>c</code>, <code>d</code>, <code>x</code>, <code>y</code>, and <code>p</code>, for cutting, copying, and pasting text.</li>
+<li>Understand the difference between <code>x</code> and <code>X</code>, as well as <code>p</code> and <code>P</code>..</li>
+</ul>
+<hr />
+<h2 id="lesson">Lesson<a class="headerlink" href="#lesson" title="Permanent link">&para;</a></h2>
+<p>Clipboard functionality in Vim revolves around cutting, copying, and pasting text, achieved using a combination of operators, motions, and dedicated clipboard commands.</p>
+<h3 id="cuttingcopying-commands">Cutting/Copying Commands<a class="headerlink" href="#cuttingcopying-commands" title="Permanent link">&para;</a></h3>
+<p><strong>Cutting/Changing (<code>c</code> and <code>d</code>)</strong></p>
+<ul>
+<li><code>c</code>: Deletes text and enters Insert Mode, we covered this in previous lesson.</li>
+<li><code>d</code>: Deletes text without entering Insert Mode, we covered this in previous lesson.</li>
+</ul>
+<p><strong>Deleting Characters (<code>x</code> and <code>X</code>)</strong></p>
+<ul>
+<li><code>x</code>: Deletes the character under the cursor.</li>
+<li><code>X</code>: Deletes the character before the cursor.</li>
+</ul>
+<p><strong>Yanking (Copying) (<code>y</code>, <code>Y</code>, <code>yy</code>)</strong></p>
+<ul>
+<li><code>y</code>: Copies text defined by a motion or text object such as <code>w</code>, <code>iw</code>, <code>a{</code>, etc</li>
+<li><code>yy</code>: Copies the entire line.</li>
+<li>
+<p><code>Y</code>: Same as <code>yy</code> in default configurations. I prefer using <code>yy</code> as it follows the logic of <code>cc</code> and <code>dd</code></p>
+</li>
+<li>
+<p>All of the above command store the copied or deleted text in a register, making it available for pasting.</p>
+</li>
+</ul>
+<h3 id="pasting-commands">Pasting Commands<a class="headerlink" href="#pasting-commands" title="Permanent link">&para;</a></h3>
+<p><strong>Pasting (<code>p</code> and <code>P</code>)</strong></p>
+<ul>
+<li><code>p</code>: Pastes text after the cursor (or below the current line in line-wise operations).</li>
+<li><code>P</code>: Pastes text before the cursor (or above the current line in line-wise operations).</li>
+</ul>
+<h3 id="registers-overview">Registers Overview<a class="headerlink" href="#registers-overview" title="Permanent link">&para;</a></h3>
+<p>Every cut, copy, or delete action stores text in a <strong>register</strong>. By default, Vim uses the unnamed register (<code>"</code>), which automatically saves the latest text for pasting. We’ll explore registers in greater depth in a future lesson, so don't concern yourself with this for right now</p>
+<h4 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h4>
+<p>By default, change commands (<code>c</code>) replace the current clipboard content. This can be frustrating when you want to enter Insert Mode with <code>c</code> and paste text, only to find that the clipboard was overwritten by the text you just deleted with the change command, instead of retaining the text you intended to paste. There are different solutions to handle this, which we will cover in future lessons:</p>
+<ul>
+<li><strong>Plugins</strong>: Some plugins can modify the default behavior of <code>c</code> commands to preserve the clipboard content.</li>
+<li><strong>Visual Mode</strong>: Instead of using <code>c</code> to replace text, you can select the text in Visual Mode and then paste directly, ensuring the clipboard content remains intact.</li>
+</ul>
+<hr />
+<h2 id="cheatsheet">CheatSheet<a class="headerlink" href="#cheatsheet" title="Permanent link">&para;</a></h2>
+<p><strong>Change single character</strong></p>
+<ul>
+<li><code>x</code> : delete a character under the cursor</li>
+<li><code>X</code> : delete a character before the cursor </li>
+</ul>
+<p><strong>Yanking</strong>:</p>
+<ul>
+<li><code>y</code> + motion: Yank text.</li>
+<li><code>yy</code> or <code>Y</code>: Yank the entire line.</li>
+</ul>
+<p><strong>Pasting</strong>:</p>
+<ul>
+<li><code>p</code>: Paste after.</li>
+<li><code>P</code>: Paste before.</li>
+</ul>
+<hr />
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Use <code>d</code> combined with motions to delete specific text:</p>
+<ul>
+<li>Delete a word using <code>dw</code> and paste it using <code>p</code>.</li>
+</ul>
+<p>Practice yanking and pasting:</p>
+<ul>
+<li>Yank a single word with <code>yw</code> and paste it using <code>p</code>.</li>
+<li>Yank the entire line using <code>yy</code> and paste it above using <code>P</code>.</li>
+</ul>
+<p>Experiment with <code>x</code> and <code>X</code>:</p>
+<ul>
+<li>Use <code>x</code> to delete characters under the cursor.</li>
+<li>Use <code>X</code> to delete the character before the cursor.</li>
+<li>Whit this knowledge you can use <code>xp</code> to swap 2 characters.</li>
+</ul>
+<p>Practice pasting with <code>p</code> and <code>P</code>, and compare their behavior:</p>
+<ul>
+<li>Paste text after the cursor using <code>p</code>.</li>
+<li>Paste text before the cursor using <code>P</code>.</li>
+</ul>
+<hr />
+<h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Change Commands</strong>: Remember by default change commands <code>d</code>, <code>c</code>, <code>x</code>, and <code>y</code> add text to the clipboard (unnamed register)</li>
+<li><strong>Pasting</strong>: Practice pasting text with <code>p</code> and <code>P</code>. Pay attention to the positioning of the cursor and how the pasted text aligns relative to the cursor.</li>
+<li><strong>Evaluate Efficiency</strong>: As you practice, reflect on whether your use of clipboard commands and motions minimizes unnecessary steps. Explore how commands like <code>yy</code> or <code>p</code> save time compared to manually selecting and inserting text.</li>
+</ul>
+<hr />
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
