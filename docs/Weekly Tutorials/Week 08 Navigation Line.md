@@ -24,7 +24,8 @@ Vim provides line navigation commands that allow you to move to specific parts o
 	In the text `The quick brown fox`, pressing `$` moves the cursor to the `x`.
 - `g_`: Move to the last non-whitespace character of the line.
 	In the line `The quick brown fox` , pressing `g_` moves the cursor to the `x`, ignoring trailing spaces.
-
+- `|` : TODO
+	
 **Between Lines**
 
 - `+`: Move to the first non-whitespace character of the **next line**.
